@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limite de velocidade</title>
+</head>
+<body>
+    <h1>Sistema de Multas <br> Veja aqui se voce foi multado!</h1>
+    <p>qual foi sua velocidade maxima?</p>
+    <input type="number" name="" id="vel">
+    <input type="button" value="verificar" onclick="clicar()">
+    <div></div>
+
+    <script>
+        function clicar(){
+            var velocidade = document.getElementById("vel")
+            let texto = document.querySelector("div")
+            var n1= Number(velocidade.value)
+             
+            if(n1>60){
+                texto.innerHTML= ("acima da velocidade , Multado!!!")
+            }else{
+                texto.innerHTML=("tranquilebas meu dog , só não anda acima da veloicidade")
+            }
+
+        }
+    </script>
+</body>
+</html>
